@@ -3,6 +3,7 @@ function doPost(e) {
 //////////////////////
   var postData_ =e.postData.contents;
   var json = JSON.parse(postData_);
+  //GoogleSpreadsheetsのSheetIDを入力してください。(URL参照)
   var sheetId = "1E8N_KqzNSRLAcnYXTXIqASmhy8a2-XXXXXXXXXXXX";
   var sheet = SpreadsheetApp.openById(sheetId);
   sheet.appendRow([
@@ -25,6 +26,7 @@ function doPost(e) {
     return;
   }
   var url = 'https://api.line.me/v2/bot/message/reply';
+  //LinewebhookのchannelTokenを入力してください。
   var channelToken = 'ZQ/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2Oie/ZHGa1Rj+LCUAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXGLjV0zmpfBzk3KRvUdpxYo5GAcMhUMYjzYv5sTvm4cQXXXXXXXXXXXXXXXXXXXXXilFU=';
 
   var messages = [{
